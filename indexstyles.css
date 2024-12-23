@@ -53,3 +53,18 @@ main {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .tracker-link {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    
+    body {
+        padding: 1rem;
+    }
+}

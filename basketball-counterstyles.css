@@ -123,3 +123,22 @@ button {
 .sub {
     background-color: red;
 }
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 1.5em;
+        padding: 8px 16px;
+    }
+
+    .counter {
+        font-size: 6em;
+    }
+
+    .reset-button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
