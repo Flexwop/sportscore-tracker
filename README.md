@@ -18,12 +18,12 @@ Responsive Design: Works seamlessly on desktops, tablets, and mobile devices. (*
 
 **1. Clone the repository:**
 
-  `git clone https://github.com/your-username/sports-score-tracker.git
+  `git clone https://github.com/Flexwop/sportscore-tracker.git)
 `
 
 **2. Navigate to the project directory:**
 
-  `cd sports-score-tracker
+  `cd sportsscore-tracker
 `
 
 **3. Open the project in a browser:**
