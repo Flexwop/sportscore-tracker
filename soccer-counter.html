@@ -13,14 +13,14 @@
     </header>
       <div class="container">
         <div class="side red">
-            <div class="counter" id="redCounter">0</div>
+            <div class="counter" id="soccerredCounter">0</div>
             <div class="button-container">
                 <button class="add" onclick="addToRed(1)">+1</button>
                 <button class="sub" onclick="subred(1)">-1</button>
             </div>
         </div>
         <div class="side blue">
-            <div class="counter" id="blueCounter">0</div>
+            <div class="counter" id="soccerblueCounter">0</div>
             <div class="button-container">
                 <button class="add" onclick="addToBlue(1)">+1</button>
                 <button class="sub" onclick="subBlue(1)">-1</button>
@@ -30,58 +30,50 @@
     </div>
     <script>
         window.onload = function() {
-            const redCounter = localStorage.getItem('redCounter') || 0;
-            const blueCounter = localStorage.getItem('blueCounter') || 0;
-            document.getElementById('redCounter').innerText = redCounter;
-            document.getElementById('blueCounter').innerText = blueCounter;
+            const redCounter = localStorage.getItem('soccerredCounter') || 0;
+            const blueCounter = localStorage.getItem('soccerblueCounter') || 0;
+            document.getElementById('soccerredCounter').innerText = redCounter;
+            document.getElementById('soccerblueCounter').innerText = blueCounter;
         };
     
         function addToRed(value) {
-            const counter = document.getElementById('redCounter');
+            const counter = document.getElementById('soccerredCounter');
             counter.innerText = parseInt(counter.innerText) + value;
-            localStorage.setItem('redCounter', counter.innerText);
+            localStorage.setItem('soccerredCounter', counter.innerText);
         }
     
         function addToBlue(value) {
-            const counter = document.getElementById('blueCounter');
+            const counter = document.getElementById('soccerblueCounter');
             counter.innerText = parseInt(counter.innerText) + value;
-            localStorage.setItem('blueCounter', counter.innerText);
+            localStorage.setItem('soccerblueCounter', counter.innerText);
         }
     
         function subred(value) {
-            const counter = document.getElementById('redCounter');
+            const counter = document.getElementById('soccerredCounter');
             const currentValue = parseInt(counter.innerText);
             if (currentValue - value >= 0) {
                 counter.innerText = currentValue - value;
-                localStorage.setItem('redCounter', counter.innerText);
+                localStorage.setItem('soccerredCounter', counter.innerText);
             }
         }
     
         function subBlue(value) {
-            const counter = document.getElementById('blueCounter');
+            const counter = document.getElementById('soccerblueCounter');
             const currentValue = parseInt(counter.innerText);
             if (currentValue - value >= 0) {
                 counter.innerText = currentValue - value;
-                localStorage.setItem('blueCounter', counter.innerText);
+                localStorage.setItem('soccerblueCounter', counter.innerText);
             }
         }
         
         function resetboth() {
-            const counterred = document.getElementById('redCounter');
-            const counterblue = document.getElementById('blueCounter');
+            const counterred = document.getElementById('soccerredCounter');
+            const counterblue = document.getElementById('soccerblueCounter');
             counterred.innerText = 0;
             counterblue.innerText = 0;
-            localStorage.setItem('redCounter', 0);
-            localStorage.setItem('blueCounter', 0);
+            localStorage.setItem('soccerredCounter', 0);
+            localStorage.setItem('soccerblueCounter', 0);
         }
-
-        function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
     </script>
 </body>
 </html>
