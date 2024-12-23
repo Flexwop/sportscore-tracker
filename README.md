@@ -4,15 +4,15 @@
 
 ### Features
 
-Multi-Sport Support: Track scores for various sports such as football, basketball, tennis, and more.
+Multi-Sport Support: Track scores for various sports such as football, basketball, tennis, and more. (*Not all yet implemented*)
 
-Customizable Teams: Add and edit team names for personalized tracking.
+Customizable Teams: Add and edit team names for personalized tracking. (*Not yet implemented*)
 
 Live Updates: Real-time score updates as you input data.
 
 User-Friendly Interface: Simple and clean design for ease of use.
 
-Responsive Design: Works seamlessly on desktops, tablets, and mobile devices.
+Responsive Design: Works seamlessly on desktops, tablets, and mobile devices. (*Currently only for desktop. Tablet and mobile version **comming soon***)
 
 ### Installation
 
