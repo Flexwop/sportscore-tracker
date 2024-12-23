@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="basketball-counterstyles.css">
+    <title>Counter Website</title>
+</head>
+<body>
+    <header>
+        <h1>Game Tracker Hub</h1>
+
+        <a href="index.html" class="tracker-link">Homepage</a>
+    </header>
+      <div class="container">
+        <div class="side red">
+            <div class="counter" id="redCounter">0</div>
+            <div class="button-container">
+                <button class="add" onclick="addToRed(1)">+1</button>
+                <button class="add" onclick="addToRed(2)">+2</button>
+                <button class="add" onclick="addToRed(3)">+3</button>
+                <button class="sub" onclick="subred(1)">-1</button>
+            </div>
+        </div>
+        <div class="side blue">
+            <div class="counter" id="blueCounter">0</div>
+            <div class="button-container">
+                <button class="add" onclick="addToBlue(1)">+1</button>
+                <button class="add" onclick="addToBlue(2)">+2</button>
+                <button class="add" onclick="addToBlue(3)">+3</button>
+                <button class="sub" onclick="subBlue(1)">-1</button>
+            </div>
+        </div>
+        <button class="reset-button" onclick="resetboth()">Reset</button>
+    </div>
+    <script>
+        window.onload = function() {
+            const redCounter = localStorage.getItem('redCounter') || 0;
+            const blueCounter = localStorage.getItem('blueCounter') || 0;
+            document.getElementById('redCounter').innerText = redCounter;
+            document.getElementById('blueCounter').innerText = blueCounter;
+        };
+    
+        function addToRed(value) {
+            const counter = document.getElementById('redCounter');
+            counter.innerText = parseInt(counter.innerText) + value;
+            localStorage.setItem('redCounter', counter.innerText);
+        }
+    
+        function addToBlue(value) {
+            const counter = document.getElementById('blueCounter');
+            counter.innerText = parseInt(counter.innerText) + value;
+            localStorage.setItem('blueCounter', counter.innerText);
+        }
+    
+        function subred(value) {
+            const counter = document.getElementById('redCounter');
+            const currentValue = parseInt(counter.innerText);
+            if (currentValue - value >= 0) {
+                counter.innerText = currentValue - value;
+                localStorage.setItem('redCounter', counter.innerText);
+            }
+        }
+    
+        function subBlue(value) {
+            const counter = document.getElementById('blueCounter');
+            const currentValue = parseInt(counter.innerText);
+            if (currentValue - value >= 0) {
+                counter.innerText = currentValue - value;
+                localStorage.setItem('blueCounter', counter.innerText);
+            }
+        }
+        
+        function resetboth() {
+            const counterred = document.getElementById('redCounter');
+            const counterblue = document.getElementById('blueCounter');
+            counterred.innerText = 0;
+            counterblue.innerText = 0;
+            localStorage.setItem('redCounter', 0);
+            localStorage.setItem('blueCounter', 0);
+        }
+
+        function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+    </script>
+</body>
+</html>
