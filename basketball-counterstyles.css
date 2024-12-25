@@ -124,21 +124,30 @@ button {
     background-color: red;
 }
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
+    .container {
+        flex-direction: column; /* Stack sides vertically */
+        height: auto; /* Adjust height for stacked layout */
     }
 
-    button {
-        font-size: 1.5em;
-        padding: 8px 16px;
-    }
-
-    .counter {
-        font-size: 6em;
+    .red, .blue {
+        height: 50vh; /* Ensure equal height for both sides */
+        width: 100%;
     }
 
     .reset-button {
-        font-size: 1em;
-        padding: 8px 16px;
+        position: relative;
+        z-index: 10;
+        top: auto; /* Reset top positioning */
+        left: 50%; /* Keep horizontally centered */
+        transform: translateX(-50%);
+        margin: -20px 0; /* Negative margin to overlap sections */
+    }
+
+    .counter {
+        font-size: 5em; /* Adjust font size for smaller screens */
+    }
+
+    button {
+        font-size: 1.2em; /* Adjust button size for mobile */
     }
 }
