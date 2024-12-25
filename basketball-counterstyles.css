@@ -125,29 +125,31 @@ button {
 }
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack sides vertically */
-        height: auto; /* Adjust height for stacked layout */
+        flex-direction: column;
+        height: auto;
     }
 
     .red, .blue {
-        height: 50vh; /* Ensure equal height for both sides */
-        width: 100%;
+        height: 50vh;
+        width: 91%;
+        padding: 30px;
     }
 
     .reset-button {
         position: relative;
-        z-index: 10;
-        top: auto; /* Reset top positioning */
-        left: 50%; /* Keep horizontally centered */
+        z-index: 0;
+        top: auto;
+        left: 50%;
+        top: -50%;
         transform: translateX(-50%);
-        margin: -20px 0; /* Negative margin to overlap sections */
+        margin: -20px 0;
     }
 
     .counter {
-        font-size: 5em; /* Adjust font size for smaller screens */
+        font-size: 5em;
     }
 
     button {
-        font-size: 1.2em; /* Adjust button size for mobile */
+        font-size: 1.2em;
     }
 }
