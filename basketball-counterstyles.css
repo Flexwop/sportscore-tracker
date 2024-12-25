@@ -1,0 +1,155 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #007acc;
+    color: white;
+    padding: 1.2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.tracker-link {
+    margin: 1rem 0;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    color: white;
+    background-color: #4c4cff;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+    top: -25px; left:700px;
+}
+
+.tracker-link:hover {
+    background-color: #3a3ae6;
+    transform: translateY(-3px);
+}
+
+.tracker-link:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    border: 2px solid #000;
+    position: relative;
+}
+.side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.red {
+    background-color: rgb(126, 7, 7);
+    color: white;
+}
+.blue {
+    background-color: rgb(3, 3, 129);
+    color: white;
+}
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 2em;
+    cursor: pointer;
+    border: white;
+    border-radius: 6%;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.counter {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12em;
+}
+.reset-button {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-62%, -50%);
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    z-index: 10;
+    background-color: aqua;
+}
+.add {
+    background-color: green;
+}
+.sub {
+    background-color: red;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .red, .blue {
+        height: 50vh;
+        width: 91%;
+        padding: 30px;
+    }
+
+    .reset-button {
+        position: relative;
+        z-index: 0;
+        top: auto;
+        left: 50%;
+        top: -50%;
+        transform: translateX(-50%);
+        margin: -20px 0;
+    }
+
+    .counter {
+        font-size: 5em;
+    }
+
+    button {
+        font-size: 1.2em;
+    }
+}
